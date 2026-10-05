@@ -1,5 +1,10 @@
 /* Mobile Styles First */
 
+:root {
+    --engDeptGreen: #505A2F;
+    --black: #000;
+}
+
 body {
     background-color: #292827;
     font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +35,7 @@ body {
                 text-transform: uppercase;
 
                 a {
-                    color: #000;
+                    color: var(--black);
                     border-right: 1px solid black;
                     padding-right: 5px;
                     margin-right: 5px;
@@ -49,6 +54,15 @@ body {
                     }
                 }
 
+                &.drop-down-menu {
+                    border: 1px solid black;
+                    margin-top: 10px;
+
+                    select {
+                        width: 100%;
+                    }
+                }
+
                 &.bottom {
                     text-transform: lowercase;
                 }
@@ -58,12 +72,25 @@ body {
         div.green-box {
             min-height: 400px;
             background-color: #C8CAAF;
-            padding: 20px 30px;
+            padding: 10px;
             margin: 10px 0 100px;
             border-radius: 10px;
+
+            aside {
+                &.left-side {
+                    display: none;
+                }
+            }
+
+            main {
+                background-color: #FFF;
+                padding: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
-
-
 
         footer {
             background-color: #676E3D;
@@ -74,20 +101,54 @@ body {
         }
 
         /* Tablet and up overrides */
-
         @media screen and (width >= 600px) {
             /* A breakpoint */
 
-            border: 10px solid yellow;
-
             section.middle {
-                > nav {
-                    text-align: right;
+                > nav { /* nav child*/
+                    text-align: right; /* Override the mobile property*/
+
+                    &.drop-down-menu {
+                        display: none;
+                    }
+                }
+
+                div.green-box {
+                    padding: 20px 30px;
+
+                    aside {
+                        &.left-side {
+                            display: block;
+                            float: left;
+                            width: 33%;
+
+                            nav {
+                                a {
+                                    display: block;
+                                    text-transform: uppercase;
+                                    font-size: 11px;
+                                    color: var(--black);
+                                    border-bottom: 2px solid #505A2F;
+                                    text-decoration: none;
+                                    padding: 10px 0 10px 10px;
+
+                                    &:hover {
+                                        background-color: #505A2F;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    main {
+                        float: right;
+                        width: 60%;
+                    }
+
                 }
             }
         }
-
-
     }
 }
 
