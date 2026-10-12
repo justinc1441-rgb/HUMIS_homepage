@@ -1,5 +1,4 @@
 /* Mobile first */
-
 body {
     background-color: #282726;
     display: flex;
@@ -22,16 +21,42 @@ body {
         section.middle {
             display: flex;
             flex-direction: column;
+            border: 10px solid red;
+            height: 100%;
+            justify-content: space-between;
+
+            nav.drop-down-menu {
+                /*display: none;*/
+            }
+
+            nav.minor {
+                a {
+                    color: var(--black);
+                    border-right: 1px solid black;
+                    padding-right: 5px;
+                    margin-right: 5px;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    img {
+                        vertical-align: middle;
+                    }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
+            }
         }
 
-        nav.drop-down-menu {
-            display: none;
-        }
 
         @media screen and (width >= 600px) {
             section.middle {
                 nav.drop-down-menu {
-                    display: flex;
+                    display: none;
                 }
             }
         }
