@@ -16,18 +16,19 @@ body {
         background-color: white;
         display: flex;
         flex-direction: column;
-        min-height: 70vh;
+        /*min-height: 70vh;*/
         justify-content: space-between;
         max-width: 780px;
 
         header {
             img {
                 width: 100%;
+                display: block;
             }
         }
 
         section.middle {
-            height: 100%;
+            /*height: 100%;*/
             display: flex;
             flex-direction: column;
 
@@ -39,16 +40,31 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 100%;
+                /*height: 100%;*/
 
                 nav.drop-down-menu {
-                    /*display: none;*/
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    background-color: var(--grey-light);
+                    padding: 20px 10px;
+                    order: -1;
+
+                    label {
+                        display: flex;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
                 }
 
                 nav.minor {
                     display: flex;
                     justify-content: center;
                     font-size: 10px;
+                    align-items: center;
+
 
                     a {
                         color: var(--black);
@@ -68,6 +84,22 @@ body {
                         &:last-of-type {
                             border-right: none;
                         }
+                    }
+
+                    &.active {
+                        text-decoration: underline;
+                    }
+
+                    &.top {
+                        text-transform: uppercase;
+                        margin-top: 5px;
+                        align-items: center;
+                        order: -2;
+                    }
+
+                    &.bottom {
+                        text-transform: lowercase;
+                        margin-bottom: 5px;
                     }
                 }
 
@@ -98,9 +130,10 @@ body {
                     width: 30%;
                     background-color: var(--grey-light);
                     border-right: 2px solid var(--green-light);
+                    padding-bottom: 20px;
 
                     nav.left-nav {
-                        margin: 20px 10px 0;
+                        margin: 20px 20px 0;
 
                         a {
                             display: block;
@@ -115,7 +148,19 @@ body {
                                 background-color: var(--engDeptGreen);
                                 color: #fff;
                             }
+
+                            &.active {
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
                         }
+                    }
+
+                    div.login-links {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
                     }
                 }
 
