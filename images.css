@@ -2,6 +2,9 @@ main {
     .pull {
         border: 10px solid black;
         display: inline-block;
+        img {
+            max-width: 200px;
+        }
 
         &.right {
             float: right;
