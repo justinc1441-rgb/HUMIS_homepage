@@ -107,6 +107,41 @@ body {
                 main {
                     padding: 30px;
                 }
+
+                .directory-nav {
+                    display: flex;
+                    gap: 8px;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
+                a {
+                    color: var(--burgundy);
+                    border-right: 1px solid black;
+                    padding-right: 5px;
+                    margin-right: 5px;
+                    text-decoration: none;
+                }
+
+                .directory-divider {
+                    border: none;
+                    border-top: 2px solid var(--black);
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+
+                .contact-item h3 {
+                    font-size: 14px;
+                    margin: 10px 0 0 2px;
+                    color: var(--black);
+                }
+
+                .contact-item p {
+                    font-size: 12px;
+                    margin: 0 10px 0 2px;
+                    color: var(--black);
+                }
             }
         }
 
@@ -178,6 +213,18 @@ body {
 
                     main {
                         min-height: 500px;
+                    }
+
+                    .contact-item h3 {
+                        font-size: 14px;
+                        margin: 10px 0 0 2px;
+                        color: var(--black);
+                    }
+
+                    .contact-item p {
+                        font-size: 12px;
+                        margin: 0 10px 0 2px;
+                        color: var(--black);
                     }
                 }
             }
